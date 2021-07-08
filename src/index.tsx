@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import {ApolloClient, InMemoryCache, ApolloProvider} from "@apollo/client";
-import GetList, {getQuery} from './getlist';
+import GetList, {listQuery} from './getlist';
 
 const client = new ApolloClient({
     uri: 'https://react-test.atlasconsulting.cz/',
@@ -14,7 +14,7 @@ function App() {
         <div>
             <h2>Hierarchical list</h2>
             <ul>
-                <GetList {...getQuery("")}/>
+                <GetList {...listQuery("")}/>
             </ul>
         </div>
     );
